@@ -1,0 +1,74 @@
+$mustard: #E7E4D5;
+$light_mustard: #f4f4f4;
+$title_font: lato, sans-serif;
+$page_font: 'Gentium Book Basic', Cambria, Georgia, Times, serif;
+
+body{
+  background-color: $mustard;
+}
+h1, h2, h3, h4, a{
+  font-family: $title_font;
+}
+p, li{
+  font-family: $page_font;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+a {
+  font-size: 1.25rem;
+}
+#header {
+  margin: 2em;
+}
+#bio {
+  margin: auto;
+  padding-top: 1em;
+  width: fit-content;
+  text-align: center;
+}
+.info_box{
+  margin: 2em;
+  background-color: $light_mustard;
+}
+.title{
+  padding-top: 10px;
+  margin: auto;
+  width: fit-content;
+}
+.entry{
+  b{
+    margin-top: 10px;
+  }
+  img{
+    width: auto;
+    height: 75px;
+    padding: 5px;
+  }
+  p{
+    margin: 0;
+  }
+  ul{
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+  }
+  li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .entry_header {
+    display: flex;
+    margin: auto;
+    padding-left: 1em;
+  }
+  .entry_info{
+    margin-top: 15px;
+  }
+  .date{
+    font-size: 0.75rem;
+  }
+}
