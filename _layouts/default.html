@@ -2,30 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Axford</title>
+    <title>Spencer Axford</title>
     <link rel="stylesheet" href="./../styles/style.css" type="text/css">
-    <link rel="stylesheet" href="./../styles/home.css" type="text/css">
 </head>
 <body>
     {% include header.html %}
-     <div class="info_box">
-         <h3 class="title">Work Experience</h3>
-         <div class="entry">
-             <div class="entry_header">
-                <img class="company_icon entry_item" src="images/lemur.png">
-                <div class="entry_info">
-                    <a><b>Lemur Vehicle Monitors</b></a>
-                    <p class="entry_description">Software Developer</p>
-                    <p class="date">May 2018 - Sept 2018</p>
-                </div>
-             </div>
-             <ul class="entry_list">
-                 <li class="list_item">Realized full stack project using Ruby with Sinatra and JavaScript with libraries including jQuery and Bootstrap</li>
-                 <li class="list_item">Implemented mobile features for both iOS and Android using Objective C and Java</li>
-                 <li class="list_item">Developed software based vehicle diagnostics simulator and testing system</li>
-             </ul>
-         </div>
-     </div>
- {{ content }}
+    <section id="projects">
+        {% include projects.html %}
+    </section>
+    <section id="work_experience">
+        {% include experience.html %}
+    </section>
+    {{ content }}
 </body>
 </html>
