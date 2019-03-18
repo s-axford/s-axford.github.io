@@ -1,11 +1,17 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
-$mustard: #E7E4D5;
-$light_mustard: #f4f4f4;
+$dark_background: #202020;
+$light_background: #808080;
+$accent: #FF8C00;
+$text_color: #ffffff;
 $title_font: lato, sans-serif;
 $page_font: 'Gentium Book Basic', Cambria, Georgia, Times, serif;
 
+html, body {
+  overflow-x:hidden;
+  margin: 0 auto;
+}
+
 body{
-  background-color: $mustard;
+  background-color: $light_background;
 }
 h1, h2, h3, h4, a{
   font-family: $title_font;
@@ -22,35 +28,105 @@ h3 {
 a {
   font-size: 1.25rem;
 }
+
+.center {
+  justify-content: center;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 #header {
-  margin: 2em;
+  margin: 0 -30px;
+  padding: 50px;
+  border-bottom: 10px solid $accent;
+  background: $dark_background;
+  margin: 0 auto;
+}
+#me {
+  width: 225px;
+  height: 150px;
+  display: block;
+}
+.icons-header{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  .icon{
+    text-align: center;
+    color: #FFF;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    transition: all .7s;
+    &:hover {
+      color: $accent;
+      background: #FFF;
+    }
+    &:active {
+      color: $accent;
+      background: #FFF;
+    }
+  }
+}
+.icon{
+  text-align: center;
+  color: #FFF;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  transition: all .7s;
+  &:hover {
+    color: $accent;
+    background: #FFF;
+  }
+  &:active {
+    color: $accent;
+    background: #FFF;
+  }
 }
 #bio {
   margin: auto;
   padding-top: 1em;
   width: fit-content;
   text-align: center;
+  color: $text_color;
 }
 .info_box{
-  margin: 2em;
-  background-color: $light_mustard;
+  background-color: $light_background;
+  display: table;
 }
 .title{
-  padding-top: 10px;
+  padding: 10px;
   margin: auto;
   width: fit-content;
+  color: $accent;
 }
 .entry{
+  display: flex;
+  justify-content: center;
+  text-align: center;
   b{
     margin-top: 10px;
   }
   img{
+    display: block;
     width: auto;
     height: 75px;
     padding: 5px;
   }
   p{
     margin: 0;
+    color: $text_color;
   }
   ul{
     margin-top: 10px;
@@ -65,6 +141,7 @@ a {
     display: flex;
     margin: auto;
     padding-left: 1em;
+    color: $text_color;
   }
   .entry_info{
     margin-top: 15px;
@@ -72,4 +149,64 @@ a {
   .date{
     font-size: 0.75rem;
   }
+}
+
+.column {
+  display: table-cell;
+}
+
+.collapsible {
+  background-color: $dark_background;
+  color: $text_color;
+  cursor: pointer;
+  padding: 18px;
+  border: $accent;
+  border-radius: 10%;
+  width: 15em;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin: 5px 5px 0 5px;
+  display: block;
+  transition: all .4s;
+}
+
+.active{
+  width: 45em;
+  border-radius: 5% 5% 0 0;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.collapsible:hover {
+  background-color: $accent;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  margin: 0 5px 0 5px;
+  background-color: $dark_background;
+  color: $text_color;
+}
+
+.collapsible .entry {
+  visibility: visible;
+  opacity: 1;
+}
+
+.collapsible:active .entry {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+#pi_image {
+  width: 40em;
+  height: 24em;
+}
+
+.watchful {
+  float:left;
 }

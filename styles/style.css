@@ -1,79 +1,181 @@
+html, body {
+  overflow-x: hidden;
+  margin: 0 auto; }
+
 body {
-  background-color: #E7E4D5;
-}
+  background-color: #808080; }
 
 h1, h2, h3, h4, a {
-  font-family: lato, sans-serif;
-}
+  font-family: lato, sans-serif; }
 
 p, li {
-  font-family: "Gentium Book Basic", Cambria, Georgia, Times, serif;
-}
+  font-family: "Gentium Book Basic", Cambria, Georgia, Times, serif; }
 
 h1 {
-  font-size: 2.5rem;
-}
+  font-size: 2.5rem; }
 
 h3 {
-  font-size: 1.5rem;
-}
+  font-size: 1.5rem; }
 
 a {
-  font-size: 1.25rem;
-}
+  font-size: 1.25rem; }
+
+.center {
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
 
 #header {
-  margin: 2em;
-}
+  margin: 0 -30px;
+  padding: 50px;
+  border-bottom: 10px solid #FF8C00;
+  background: #202020;
+  margin: 0 auto; }
+
+#me {
+  width: 225px;
+  height: 150px;
+  display: block; }
+
+.icons-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px; }
+  .icons-header .icon {
+    text-align: center;
+    color: #FFF;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    transition: all .7s; }
+    .icons-header .icon:hover {
+      color: #FF8C00;
+      background: #FFF; }
+    .icons-header .icon:active {
+      color: #FF8C00;
+      background: #FFF; }
+
+.icon {
+  text-align: center;
+  color: #FFF;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  transition: all .7s; }
+  .icon:hover {
+    color: #FF8C00;
+    background: #FFF; }
+  .icon:active {
+    color: #FF8C00;
+    background: #FFF; }
 
 #bio {
   margin: auto;
   padding-top: 1em;
   width: fit-content;
   text-align: center;
-}
+  color: #ffffff; }
 
 .info_box {
-  margin: 2em;
-  background-color: #f4f4f4;
-}
+  background-color: #808080;
+  display: table; }
 
 .title {
-  padding-top: 10px;
+  padding: 10px;
   margin: auto;
   width: fit-content;
-}
+  color: #FF8C00; }
 
-.entry b {
-  margin-top: 10px;
-}
-.entry img {
-  width: auto;
-  height: 75px;
-  padding: 5px;
-}
-.entry p {
-  margin: 0;
-}
-.entry ul {
-  margin-top: 10px;
-  margin-left: 80px;
-  margin-bottom: 10px;
-}
-.entry li {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.entry .entry_header {
+.entry {
   display: flex;
-  margin: auto;
-  padding-left: 1em;
-}
-.entry .entry_info {
-  margin-top: 15px;
-}
-.entry .date {
-  font-size: 0.75rem;
-}
+  justify-content: center;
+  text-align: center; }
+  .entry b {
+    margin-top: 10px; }
+  .entry img {
+    display: block;
+    width: auto;
+    height: 75px;
+    padding: 5px; }
+  .entry p {
+    margin: 0;
+    color: #ffffff; }
+  .entry ul {
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-bottom: 10px; }
+  .entry li {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .entry .entry_header {
+    display: flex;
+    margin: auto;
+    padding-left: 1em;
+    color: #ffffff; }
+  .entry .entry_info {
+    margin-top: 15px; }
+  .entry .date {
+    font-size: 0.75rem; }
+
+.column {
+  display: table-cell; }
+
+.collapsible {
+  background-color: #202020;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 18px;
+  border: #FF8C00;
+  border-radius: 10%;
+  width: 15em;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin: 5px 5px 0 5px;
+  display: block;
+  transition: all .4s; }
+
+.active {
+  width: 45em;
+  border-radius: 5% 5% 0 0; }
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.collapsible:hover {
+  background-color: #FF8C00; }
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  margin: 0 5px 0 5px;
+  background-color: #202020;
+  color: #ffffff; }
+
+.collapsible .entry {
+  visibility: visible;
+  opacity: 1; }
+
+.collapsible:active .entry {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear; }
+
+#pi_image {
+  width: 40em;
+  height: 24em; }
+
+.watchful {
+  float: left; }
 
 /*# sourceMappingURL=style.css.map */
