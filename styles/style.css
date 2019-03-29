@@ -18,7 +18,10 @@ h3 {
   font-size: 1.5rem; }
 
 a {
-  font-size: 1.25rem; }
+  color: #FF8C00; }
+
+a:visited {
+  color: #FF8C00; }
 
 .center {
   justify-content: center;
@@ -76,7 +79,6 @@ a {
     color: #FF8C00;
     background: #FFF; }
   .icon:active {
-    color: #FF8C00;
     background: #FFF; }
 
 #bio {
@@ -145,22 +147,42 @@ a {
   display: block;
   transition: all .4s; }
 
-.active {
+.collapsible.active {
   width: 45em;
-  border-radius: 5% 5% 0 0; }
+  padding: 18px;
+  border-radius: 2em 2em 0 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FF8C00; }
+  .collapsible.active b {
+    color: #202020; }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .collapsible:hover {
   background-color: #FF8C00; }
+  .collapsible:hover b {
+    color: #202020; }
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 18px;
   display: none;
   overflow: hidden;
-  margin: 0 5px 0 5px;
+  margin: 0 0 15px 0;
   background-color: #202020;
-  color: #ffffff; }
+  color: #ffffff;
+  border-radius: 0 0 2em 2em; }
+  .content p {
+    min-width: 100%;
+    width: 0; }
+  .content table {
+    table-layout: fixed;
+    min-width: 100%;
+    width: 0; }
+  .content td {
+    width: 33%; }
+    .content td img {
+      width: 95%; }
 
 .collapsible .entry {
   visibility: visible;

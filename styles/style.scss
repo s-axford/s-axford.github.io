@@ -25,8 +25,13 @@ h1 {
 h3 {
   font-size: 1.5rem;
 }
+
 a {
-  font-size: 1.25rem;
+  color: $accent;
+}
+
+a:visited {
+  color: $accent;
 }
 
 .center {
@@ -90,7 +95,6 @@ a {
     background: #FFF;
   }
   &:active {
-    color: $accent;
     background: #FFF;
   }
 }
@@ -171,14 +175,24 @@ a {
   transition: all .4s;
 }
 
-.active{
+.collapsible.active{
   width: 45em;
-  border-radius: 5% 5% 0 0;
+  padding: 18px;
+  border-radius: 2em 2em 0 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $accent;
+  b {
+    color: $dark_background;
+  }
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .collapsible:hover {
   background-color: $accent;
+  b {
+    color: $dark_background;
+  }
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -186,9 +200,25 @@ a {
   padding: 18px;
   display: none;
   overflow: hidden;
-  margin: 0 5px 0 5px;
+  margin: 0 0 15px 0;
   background-color: $dark_background;
   color: $text_color;
+  border-radius: 0 0 2em 2em;
+  p {
+    min-width: 100%;
+    width: 0;
+  }
+  table {
+    table-layout: fixed ;
+    min-width: 100% ;
+    width: 0;
+  }
+  td {
+    width: 33%;
+    img {
+      width: 95%;
+    }
+  }
 }
 
 .collapsible .entry {
@@ -210,3 +240,5 @@ a {
 .watchful {
   float:left;
 }
+
+
