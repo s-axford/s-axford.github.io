@@ -10,17 +10,26 @@ coll.each( function() {
             let count = arr.length;
             arr.each(function () {
                 if($(this).css("display") === "none"){
-                    $(this).animate({
+                    $(this).parent().animate({
                         width: "15em"
                     }, {
-                        duration: 100,
+                        duration: 300,
                         specialEasing: {
                             width: 'linear'
                         }
                     });
-                    $(this).fadeIn(100, function(){
+                    // $(this).animate({
+                    //     width: "15em"
+                    // }, {
+                    //     duration: 100,
+                    //     specialEasing: {
+                    //         width: 'linear'
+                    //     }
+                    // });
+                    $(this).fadeIn(300, function(){
                         if (!--count) {
                             $(selected).toggleClass("active");
+                            $(selected).parent().css("width", "15em");
                             content.css("display", "none");
 
                         }
@@ -32,17 +41,26 @@ coll.each( function() {
             arr.splice($.inArray(this, arr),1);
             let count = arr.length;
             arr.each(function() {
-                $(this).animate({
+                $(this).parent().animate({
                     width: 0
                 }, {
-                    duration: 100,
+                    duration: 300,
                     specialEasing: {
                         width: 'linear'
                     }
                 });
-                $(this).fadeOut(100, function(){
+                // $(this).animate({
+                //     width: 0
+                // }, {
+                //     duration: 100,
+                //     specialEasing: {
+                //         width: 'linear'
+                //     }
+                // });
+                $(this).fadeOut(300, function(){
                     if (!--count) {
                         $(selected).toggleClass("active");
+                        $(selected).parent().css("width", "70%");
                         $(selected).css('width', '');
                         content.css("display", "block");
                     }

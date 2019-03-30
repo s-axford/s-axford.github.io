@@ -94,6 +94,11 @@ a:visited {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 15px; }
+  .info_box .column {
+    width: 15em;
+    transition: all .4s; }
+  .info_box .column.active {
+    width: 70%; }
 
 .title {
   padding: 10px;
@@ -140,6 +145,7 @@ a:visited {
   border: #FF8C00;
   border-radius: 10%;
   width: 15em;
+  max-width: 100%;
   text-align: left;
   outline: none;
   font-size: 15px;
@@ -148,7 +154,7 @@ a:visited {
   transition: all .4s; }
 
 .collapsible.active {
-  width: 45em;
+  width: 100%;
   min-width: 25%;
   padding: 18px;
   border-radius: 2em 2em 0 0;
@@ -173,7 +179,8 @@ a:visited {
   overflow: hidden;
   background-color: #202020;
   color: #ffffff;
-  border-radius: 0 0 2em 2em; }
+  border-radius: 0 0 2em 2em;
+  transition: all .4s; }
   .content p {
     min-width: 100%;
     width: 0;
