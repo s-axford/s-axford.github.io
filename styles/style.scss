@@ -107,7 +107,13 @@ a:visited {
 }
 .info_box{
   background-color: $light_background;
-  display: table;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 15px;
+
+  .column {
+  }
 }
 .title{
   padding: 10px;
@@ -155,10 +161,6 @@ a:visited {
   }
 }
 
-.column {
-  display: table-cell;
-}
-
 .collapsible {
   background-color: $dark_background;
   color: $text_color;
@@ -170,13 +172,14 @@ a:visited {
   text-align: left;
   outline: none;
   font-size: 15px;
-  margin: 5px 5px 15px 5px;
+  margin: 5px 5px 0 5px;
   display: block;
   transition: all .4s;
 }
 
 .collapsible.active{
   width: 45em;
+  min-width: 25%;
   padding: 18px;
   border-radius: 2em 2em 0 0;
   margin-left: auto;
@@ -198,16 +201,18 @@ a:visited {
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
+  min-width: 25%;
   padding: 18px;
   display: none;
   overflow: hidden;
-  margin: 0 0 15px 0;
   background-color: $dark_background;
   color: $text_color;
   border-radius: 0 0 2em 2em;
+
   p {
     min-width: 100%;
     width: 0;
+    text-align: left;
   }
   table {
     table-layout: fixed ;
