@@ -1,2 +1,2 @@
-# s-axford.github.io
-Personal Website
+# http://spenceraxford.ca
+Personal website to showcase personal projects
