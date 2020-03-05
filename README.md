@@ -1,2 +1,2 @@
-# http://spenceraxford.ca
+# https://spenceraxford.ca
 Personal website to showcase personal projects
