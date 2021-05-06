@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: spenceraxford.ca
+Token: 751e59cf7e8a26ae33ffab3c0e32d66ddea8e1110eb39531024b960d067972ec
